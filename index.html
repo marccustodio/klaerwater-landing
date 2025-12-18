@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>KLAER — Design-led water purification</title>
+  <meta name="description" content="KLAER is developing a sovereign water purification system for European homes—designed with the same care and trust as the kitchens it belongs in." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="KLAER" />
+  <meta property="og:description" content="Design-led water purification. Built in Europe to last." />
+  <meta property="og:type" content="website" />
+
+  <!-- Minimal, lightweight styling (no frameworks) -->
+  <style>
+    :root{
+      --bg: #ffffff;
+      --fg: #0f0f10;
+      --muted: rgba(15, 15, 16, 0.68);
+      --hairline: rgba(15, 15, 16, 0.12);
+      --max: 740px;
+      --pad: clamp(20px, 4vw, 44px);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root{
+        --bg: #0b0c0e;
+        --fg: #f2f3f5;
+        --muted: rgba(242, 243, 245, 0.72);
+        --hairline: rgba(242, 243, 245, 0.12);
+        --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      letter-spacing: -0.01em;
+    }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--hairline);
+    }
+    a:hover{ border-bottom-color: var(--muted); }
+
+    .page{
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--pad);
+    }
+
+    .card{
+      width: 100%;
+      max-width: var(--max);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius);
+      padding: clamp(22px, 4.5vw, 44px);
+      box-shadow: var(--shadow);
+      background: color-mix(in srgb, var(--bg) 92%, var(--fg) 8%);
+    }
+
+    /* If color-mix isn't supported, fallback to bg */
+    @supports not (background: color-mix(in srgb, white 90%, black 10%)){
+      .card{ background: var(--bg); }
+    }
+
+    .brand{
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--hairline);
+      margin-bottom: 22px;
+    }
+
+    .logo{
+      font-size: clamp(26px, 3.2vw, 36px);
+      font-weight: 650;
+      letter-spacing: 0.14em;
+    }
+
+    .tagline{
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .content{
+      display: grid;
+      gap: 18px;
+      line-height: 1.45;
+    }
+
+    h1{
+      margin: 0;
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 520;
+      color: var(--fg);
+      letter-spacing: -0.01em;
+    }
+
+    p{
+      margin: 0;
+      font-size: clamp(16px, 1.6vw, 18px);
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .fine{
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact{
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hairline);
+      display: grid;
+      gap: 8px;
+    }
+
+    .cta{
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .email{
+      font-size: clamp(16px, 1.6vw, 18px);
+      font-weight: 520;
+      letter-spacing: 0.01em;
+      display: inline-flex;
+      width: fit-content;
+    }
+
+    footer{
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .dot{
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--hairline);
+      display: inline-block;
+      margin: 0 10px;
+      transform: translateY(-1px);
+    }
+
+    /* Accessibility: ensure focus is visible */
+    a:focus-visible{
+      outline: 2px solid color-mix(in srgb, var(--fg) 35%, transparent);
+      outline-offset: 4px;
+      border-bottom-color: transparent;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 560px){
+      .brand{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .tagline{ white-space: normal; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page" role="main">
+    <section class="card" aria-label="KLAER landing">
+      <div class="brand">
+        <div class="logo" aria-label="KLAER">KLAER</div>
+        <div class="tagline">Design-led water purification. Built in Europe to last.</div>
+      </div>
+
+      <div class="content">
+        <p>
+          KLAER is developing a sovereign water purification system for European homes—designed with the same care and trust
+          as the kitchens it belongs in.
+        </p>
+
+        <div class="fine">Designed and made in Portugal.</div>
+
+        <div class="contact">
+          <div class="cta">Want to know more? Get in touch.</div>
+          <a class="email" href="mailto:hello@klaerwater.com">hello@klaerwater.com</a>
+        </div>
+
+        <footer>
+          <div>© <span id="y">KLAER</span></div>
+          <div aria-hidden="true"><span class="dot"></span></div>
+          <div>klaerwater.com</div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Keep copyright year current without dependencies
+    (function () {
+      var y = new Date().getFullYear();
+      var el = document.getElementById('y');
+      if (el) el.textContent = 'KLAER ' + y;
+    })();
+  </script>
+</body>
+</html>
