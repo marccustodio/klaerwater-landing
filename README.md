@@ -1,2 +1,7 @@
-# klaerwater-landing
-Holding page for KLAER: a European, design-led water purification company.
+# KLAER
+
+This repository contains the holding page for **KLAER**.
+
+KLAER is developing a design-led, permanent water purification system for European homes.
+
+This site is intentionally minimal and framework-free.
